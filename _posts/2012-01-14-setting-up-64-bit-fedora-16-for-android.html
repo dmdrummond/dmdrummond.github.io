@@ -1,0 +1,13 @@
+---
+layout: post
+title: Setting up 64-bit Fedora 16 for Android Development
+date: '2012-01-14T05:17:00.000-08:00'
+author: Daniel Drummond
+tags:
+- Fedora 64-bit Android development ia32-libs linux
+modified_time: '2012-01-14T05:17:57.056-08:00'
+blogger_id: tag:blogger.com,1999:blog-531773883684728825.post-81859480076878348
+blogger_orig_url: http://apporia.blogspot.com/2012/01/setting-up-64-bit-fedora-16-for-android.html
+---
+
+<span style="font-family: Verdana,sans-serif;">Linux is a far more efficient platform for development than Windows or OSX, especially for Android, but the instructions for installing the SDK on </span><a href="http://d.android.com/" style="font-family: Verdana,sans-serif;">d.android.com</a><span style="font-family: Verdana,sans-serif;"> are more catered for Ubuntu.&nbsp; I use 64-bit Fedora on my laptop, and typically there are some deviations due to different packages being available.&nbsp; One in particular is installing the required x86 libs.&nbsp; On debian-based systems it is as simple as</span><br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">apt-get install ia32-libs<span style="font-family: Arial,Helvetica,sans-serif;">&nbsp;</span></span><br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><span style="font-family: Arial,Helvetica,sans-serif;">Fedora doesn't have an</span></span> equivalent package, so a quick google found <a href="http://iexcel.wordpress.com/2010/01/25/ia32-libs-for-android-sdk-on-fedora-12-x86_64/">this site</a> which gives a package list for Fedora 12.&nbsp; It works fine apart from one packages, so for Fedora 16 the command is (as root)<br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">yum install alsa-lib.i686 audiofile.i686 directfb.i686 esound-libs.i686 expat.i686 freetype-freeworld.i686 glibc.i686 libdrm.i686 libgcc.i686 libjpeg.i686 libpng.i686 libselinux.i686 libstdc++.i686 libsysfs.i686 libv4l.i686 libvncserver.i686 libX11.i686 libXau.i686 libxcb.i686 libXdamage.i686 libXdmcp.i686 libXext.i686 libXfixes.i686 libXxf86vm.i686 lzo-minilzo.i686 mesa-dri-drivers.i686 mesa-libGL.i686 ncurses-libs.i686 SDL.i686 tslib.i686 zlib.i686</span>

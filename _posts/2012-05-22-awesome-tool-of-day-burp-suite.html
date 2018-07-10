@@ -1,0 +1,13 @@
+---
+layout: post
+title: 'Awesome Tool of the Day: Burp Suite'
+date: '2012-05-22T15:34:00.000-07:00'
+author: Daniel Drummond
+tags: 
+modified_time: '2012-05-22T15:34:33.317-07:00'
+thumbnail: http://4.bp.blogspot.com/-FU2g7mdWdQY/T7wSmjMJi8I/AAAAAAAAB0Q/a_RAg3szTLI/s72-c/burp1.png
+blogger_id: tag:blogger.com,1999:blog-531773883684728825.post-6223134549114421860
+blogger_orig_url: http://apporia.blogspot.com/2012/05/awesome-tool-of-day-burp-suite.html
+---
+
+<a href="http://portswigger.net/burp/">Burp suite</a>&nbsp;is a collection of tools designed to allow for the testing of web applications. &nbsp;It is a java tool, and happily runs on both Windows and Linux. &nbsp;I tested it on Windows 7 and Fedora, and it worked well on both. It comes in two versions: a free version with a limited featureset, and a paid version containing all features.<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-FU2g7mdWdQY/T7wSmjMJi8I/AAAAAAAAB0Q/a_RAg3szTLI/s1600/burp1.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="497" src="http://4.bp.blogspot.com/-FU2g7mdWdQY/T7wSmjMJi8I/AAAAAAAAB0Q/a_RAg3szTLI/s640/burp1.png" width="640" /></a></div><br /><br />My particular need for it today was sniffing https traffic to investigate a protocol. &nbsp;The component which allows this is Proxy. &nbsp;The way it works is by redirecting all your traffic through a local proxy server set up on port 8080. &nbsp;For https traffic the proxy provides its own certificates, which means it is able to read the packets. &nbsp;It then communicates securely with the remote site securely using the real certificate. &nbsp;This can be used for a multitude of purposes including reverse engineering a protocol, or debugging applications that use https.<br /><br />There are a ton of other features that this tool offers, I really haven't had a chance to look at much of it. &nbsp;If the rest of it is as useful and simple to use as Proxy, this is one tool you need to have.

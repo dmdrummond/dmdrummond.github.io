@@ -1,0 +1,12 @@
+---
+layout: post
+title: Using hardware devices for Android development in Linux
+date: '2013-03-31T05:52:00.000-07:00'
+author: Daniel Drummond
+tags: 
+modified_time: '2013-03-31T05:52:53.857-07:00'
+blogger_id: tag:blogger.com,1999:blog-531773883684728825.post-1172033057311614024
+blogger_orig_url: http://apporia.blogspot.com/2013/03/using-hardware-devices-for-android.html
+---
+
+One of the most frustrating things when doing Android development on hardware devices is when you plug in a new device, and it isn't recognised by adb. Usually you see this:<br /><br /><pre>[dmdrummond@fiva ~]$ adb devices<br />List of devices attached <br />emulator-5554 device<br />???????????? no permissions<br /></pre><pre><br /></pre>The normal cause of this is not having a udev entry for the manufacturer of the device you just plugged in.  On &nbsp;&nbsp;<a href="http://d.android.com/" rel="nofollow" target="_blank">the Android Developers site</a>&nbsp;there is a&nbsp;<a href="http://developer.android.com/tools/device.html" rel="nofollow" target="_blank">guide</a>&nbsp;to setting these up, and a table containing a number of codes for different device manufacturers. I have compiled this list into a rules file for udev to remove this annoyance from my life, and yours too.<br /><br /><a href="https://github.com/dmdrummond/51-android.rules" target="_blank">https://github.com/dmdrummond/51-android.rules</a><br /><br />Please add any additions, or any corrections to the comments below, and I will keep the file up to date, alternatively add through github.
